@@ -103,7 +103,7 @@ Jump forward as vigorously as possible with parallel feet, swinging your arms in
     column(2,
            h4("Result"),
            sliderInput(inputId = "Jump",
-                       label = "Jumping:",
+                       label = "Distance in meters:",
                        min = 0,
                        max = 3.1,
                        value = 1.5)
@@ -122,7 +122,7 @@ Sit on the Swedish bench with your buttocks and back against the wall, feet hip-
 
     column(2,
            sliderInput(inputId = "Ball",
-                       label = "Ball Toss:",
+                       label = "Distance in meters:",
                        min = 0,
                        max = 10.1,
                        value = 5.05)
@@ -143,7 +143,7 @@ Stand in the hoop and wait for the expert's signal (ready?) to balance on your l
 
     column(2,
            sliderInput(inputId = "Equil",
-                       label = "Equilibrium:",
+                       label = "Combined time in seconds:",
                        min = 0,
                        max = 110,
                        value = 50)
@@ -163,7 +163,7 @@ Lift your feet alternately 2 to 5 cm at a rate of once per second. The lower bac
 
     column(2,
            sliderInput(inputId = "Plank",
-                       label = "Planking:",
+                       label = "Time in seconds:",
                        min = 0,
                        max = 300,
                        value = 160)
@@ -182,7 +182,7 @@ Lift your feet alternately 2 to 5 cm at a rate of once per second. The lower bac
 Take your place on the back line that serves as the starting line. Wait for the 5th beep, a little higher than the previous ones, which marks the beginning of the test, to go back and forth between the two back lines as many times as possible. At each beep, you must be on the center line or behind the baseline. You must cross the baseline or touch it with the tip of your foot for the turn to be valid. The speed increases every 200 m (louder beep). You are eliminated as soon as you can no longer keep up the pace or catch up. Leave the race area immediately and make sure that the expert has noted your time.")),
     column(width = 2,
            sliderInput(inputId = "Run",
-                       label = "Runing:",
+                       label = "Time in seconds:",
                        min = 0,
                        max = 1300,
                        value = 600)
