@@ -92,89 +92,113 @@ ui <- fluidPage(
   titlePanel("Performance Scoreboard for Recruitment"),
   # Slider 1
   fluidRow(
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
-    column(3,
+    column(width = 4,
+           h4("Task 1 : Jumping"),
+           p("The goal is to jump as far forward as possible.
+Stand behind the take-off line with your feet hip-width apart. Stand on your toes and make sure your feet don't bite into the line.
+Bend your knees slightly and lean forward a little. Bring your arms back to lunge. Look straight ahead.
+Jump forward as vigorously as possible with parallel feet, swinging your arms in front of you. Land with both feet on the mat. Hold the position (if possible) for a few seconds and step out in front of the mats. You have three tries; the best one counts.")),
+
+
+    column(2,
+           h4("Result"),
            sliderInput(inputId = "Jump",
                        label = "Jumping:",
                        min = 0,
                        max = 3.1,
-                       value = 30)
+                       value = 1.5)
     ),
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
-  ),
+    column(width = 2,
+           h4("Picture"),
+           img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZfnvRwQtllKKhFK8LTTwmCBVAxTP4-TxQ_ruUMQvt9i6X5s7O3SSDK0pgD49ErSgJ7Q&usqp=CAU", width = "300px", height = "200px"))
+   ),
+
   # Slider 2
   fluidRow(
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
-    column(3,
+    column(width = 4,
+           h4("Task 2 : Ball Toss"),
+           p("The goal is to throw the ball as far as possible in front of you with both hands.
+Sit on the Swedish bench with your buttocks and back against the wall, feet hip-width apart. Place a foam ball between your shoulder blades (it should not move during the throw). Grab the heavy ball held by another candidate and hold it in front of your chest with both hands, elbows apart. Throw the ball explosively (without pumping) by pushing on the legs so that the back stays against the wall. The ball should be thrown at an angle of about 45 degrees. You have three tries; the best one counts.")),
+
+    column(2,
            sliderInput(inputId = "Ball",
                        label = "Ball Toss:",
                        min = 0,
                        max = 10.1,
-                       value = 30)
+                       value = 5.05)
     ),
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
+    # Define third column
+    column(width = 4,
+           h4("Picture"),
+           img(src = "https://i.ytimg.com/vi/uZfNDP0_1so/mqdefault.jpg", width = "300px", height = "200px"))
   ),
   # Slider 3
   fluidRow(
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
-    column(3,
+    # Define first column
+    column(width = 4,
+           h4("Task 3 : Equilibrium"),
+
+           p("The objective is to stay still in the hoop on one leg for as long as possible.
+Stand in the hoop and wait for the expert's signal (ready?) to balance on your left leg (almost straight), place your right foot in the hollow of your left knee and cross your arms behind your back. The timer will be started once you are in this position (start!). After 10 seconds, close your eyes on the expert's command and, 10 seconds later, still on the expert's command, slowly tilt your head back. Keep this position as long as possible. The test ends after 60 seconds. Then repeat the exercise on the right leg.")),
+
+    column(2,
            sliderInput(inputId = "Equil",
                        label = "Equilibrium:",
                        min = 0,
                        max = 110,
-                       value = 30)
+                       value = 50)
     ),
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
+    # Define third column
+    column(width = 4,
+           h4("Picture"),
+           img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLAGU9SyXwkVJCUh67II_SOM-xuKpxAFdaxEbrteb8y9lpCSpJGjmChUH7PO9RABt58E&usqp=CAU", width = "300px", height = "200px"))
   ),
   # Slider 4
   fluidRow(
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
-    column(3,
+    # Define first column
+    column(width = 4,
+           h4("Task 4 : Planking"),
+           p("The goal is to hold the plank position for as long as possible while alternately lifting your legs in rhythm.
+Lift your feet alternately 2 to 5 cm at a rate of once per second. The lower back must remain in constant contact with the bar of the machine for the duration of the test, otherwise the timer will be stopped.","Hide Text", "Show Text")),
+
+    column(2,
            sliderInput(inputId = "Plank",
                        label = "Planking:",
                        min = 0,
                        max = 300,
-                       value = 30)
+                       value = 160)
     ),
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
+    # Define third column
+    column(width = 4,
+           h4("Picture"),
+           img(src = "https://i.ytimg.com/vi/hdeM1WRmFkk/mqdefault.jpg", width = "300px", height = "200px"))
   ),
   # Slider 5
   fluidRow(
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    ),
-    column(3,
+    # Define first column
+    column(width = 4,
+           h4("Task 5 : Running"),
+           p("The goal is to keep running as long as possible at the set pace.
+Take your place on the back line that serves as the starting line. Wait for the 5th beep, a little higher than the previous ones, which marks the beginning of the test, to go back and forth between the two back lines as many times as possible. At each beep, you must be on the center line or behind the baseline. You must cross the baseline or touch it with the tip of your foot for the turn to be valid. The speed increases every 200 m (louder beep). You are eliminated as soon as you can no longer keep up the pace or catch up. Leave the race area immediately and make sure that the expert has noted your time.")),
+    column(width = 2,
            sliderInput(inputId = "Run",
                        label = "Runing:",
                        min = 0,
                        max = 1300,
-                       value = 30)
+                       value = 600)
     ),
-    column(4,
-           img(src = "armee.png", height=70, width=400)
-    )
+    # Define third column
+    column(width = 4,
+           h4("Picture"),
+           img(src = "https://i.ytimg.com/vi/JoF2a80NJ6Y/maxresdefault.jpg", width = "300px", height = "200px"))
   ),
+
   # row 6
   fluidPage(
     column(6,
            plotOutput("plot", width = "400px")),
-    column(4,dataTableOutput("dynamic"))
+    column(4,dataTableOutput("dynamic")
+    )
   )
 )
 
