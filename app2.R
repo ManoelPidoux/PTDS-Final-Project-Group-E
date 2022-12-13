@@ -120,7 +120,7 @@ Jump forward as vigorously as possible with parallel feet, swinging your arms in
            p("The goal is to throw the ball as far as possible in front of you with both hands.
 Sit on the Swedish bench with your buttocks and back against the wall, feet hip-width apart. Place a foam ball between your shoulder blades (it should not move during the throw). Grab the heavy ball held by another candidate and hold it in front of your chest with both hands, elbows apart. Throw the ball explosively (without pumping) by pushing on the legs so that the back stays against the wall. The ball should be thrown at an angle of about 45 degrees. You have three tries; the best one counts.")),
 
-    column(2,
+    column(4,
            sliderInput(inputId = "Ball",
                        label = "Distance in meters:",
                        min = 0,
@@ -161,7 +161,7 @@ Stand in the hoop and wait for the expert's signal (ready?) to balance on your l
            p("The goal is to hold the plank position for as long as possible while alternately lifting your legs in rhythm.
 Lift your feet alternately 2 to 5 cm at a rate of once per second. The lower back must remain in constant contact with the bar of the machine for the duration of the test, otherwise the timer will be stopped.","Hide Text", "Show Text")),
 
-    column(2,
+    column(4,
            sliderInput(inputId = "Plank",
                        label = "Time in seconds:",
                        min = 0,
