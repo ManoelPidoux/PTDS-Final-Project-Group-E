@@ -105,8 +105,8 @@ Jump forward as vigorously as possible with parallel feet, swinging your arms in
            sliderInput(inputId = "Jump",
                        label = "Jumping:",
                        min = 0,
-                       max = 3.1,
-                       value = 1.5)
+                       max = 3.00,
+                       value = 1.5,step =0.01)
     ),
     column(width = 2,
            h4("Picture"),
@@ -124,8 +124,8 @@ Sit on the Swedish bench with your buttocks and back against the wall, feet hip-
            sliderInput(inputId = "Ball",
                        label = "Ball Toss:",
                        min = 0,
-                       max = 10.1,
-                       value = 5.05)
+                       max = 10.00,
+                       value = 5.00,step =0.01)
     ),
     # Define third column
     column(width = 4,
