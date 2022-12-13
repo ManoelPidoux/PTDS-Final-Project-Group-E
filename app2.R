@@ -70,6 +70,23 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
   return(invisible(list_of_points))
 }
 
+Orientation <- function(results){
+  Performances <- readxl::read_excel(here::here("Data/Performance_sportive_et_nb_points.xlsx"))
+  sum_of_points <- Reduce('+', results)
+  list_of_posibilities <- list()
+  list_of_points <- list()
+  for(i in 1:nrow(Performances)){
+    if(sum_of_points >= Performances[i,2]){list_of_posibilities <- append(list_of_posibilities,Performances[i,1])}
+  }
+  for(i in 1:nrow(Performances)){
+    if(sum_of_points >= Performances[i,2]){list_of_points <- append(list_of_points,Performances[i,2])}
+  }
+  df <- data.frame("Possibilités"= as.character(list_of_posibilities), "Points_minimums" = as.numeric(list_of_points))
+  return(invisible(df))
+}
+
+
+
 ui <- fluidPage(
   # App title ----
   titlePanel("Performance Scoreboard for Recruitment"),
@@ -155,7 +172,9 @@ ui <- fluidPage(
   ),
   # row 6
   fluidPage(
-    plotOutput("plot", width = "400px")
+    column(6,
+           plotOutput("plot", width = "400px")),
+    column(4,dataTableOutput("dynamic"))
   )
 )
 
@@ -180,6 +199,9 @@ server <- function(input, output) {
   output$plot <- renderPlot({
     Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )
   })
+  output$dynamic <- renderDataTable({
+    Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run ))}, options = list(pageLength = 5)
+  )
 }
 
 shinyApp(ui, server)
