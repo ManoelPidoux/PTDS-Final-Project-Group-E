@@ -1,6 +1,7 @@
 library(shiny)
 library(readxl)
 library(fmsb)
+library(bslib)
 
 Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, running = 0){
   if(any(!is.numeric(jumping))){
@@ -88,17 +89,18 @@ Orientation <- function(results){
 
 
 ui <- fluidPage(
+  #theme = bs_theme(version = 4, bootswatch = "journal"),
   # App title ----
   titlePanel("Performance Scoreboard for Recruitment"),
   sidebarLayout(
     sidebarPanel(title = "Results",
              sliderInput(inputId = "Jump",
-                         label = "Jumping Distance in meters:",
+                         label = "Jumping distance in meters:",
                          min = 0,
                          max = 3.00,
                          value = 1.5,step =0.01),
              sliderInput(inputId = "Ball",
-                         label = "Ball Toss Distance in meters:",
+                         label = "Ball Toss distance in meters:",
                          min = 0,
                          max = 10.00,
                          value = 5.00,step =0.01),
@@ -126,7 +128,7 @@ ui <- fluidPage(
 Stand behind the take-off line with your feet hip-width apart. Stand on your toes and make sure your feet don't bite into the line.
 Bend your knees slightly and lean forward a little. Bring your arms back to lunge. Look straight ahead.
 Jump forward as vigorously as possible with parallel feet, swinging your arms in front of you. Land with both feet on the mat. Hold the position (if possible) for a few seconds and step out in front of the mats. You have three tries; the best one counts."),
-                 img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZfnvRwQtllKKhFK8LTTwmCBVAxTP4-TxQ_ruUMQvt9i6X5s7O3SSDK0pgD49ErSgJ7Q&usqp=CAU", width = "250px")),
+                 div(style = "text-align: center",img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZfnvRwQtllKKhFK8LTTwmCBVAxTP4-TxQ_ruUMQvt9i6X5s7O3SSDK0pgD49ErSgJ7Q&usqp=CAU", width = "250px",style = "margin-top: 10px"))),
         tabPanel(h4("Task 2 : Ball Toss"),
                  p("The goal is to throw the ball as far as possible in front of you with both hands.
                    Sit on the Swedish bench with your buttocks and back against the wall, feet hip-width apart.
@@ -134,7 +136,7 @@ Jump forward as vigorously as possible with parallel feet, swinging your arms in
                    Grab the heavy ball held by another candidate and hold it in front of your chest with both hands, elbows apart.
                    Throw the ball explosively (without pumping) by pushing on the legs so that the back stays against the wall.
                    The ball should be thrown at an angle of about 45 degrees. You have three tries; the best one counts."),
-                 img(src = "https://i.ytimg.com/vi/uZfNDP0_1so/mqdefault.jpg", width = "300px")),
+                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/uZfNDP0_1so/mqdefault.jpg", width = "500px",style = "margin-top: 60px"))),
         tabPanel(h4("Task 3 : Equilibrium"),
                  p("The objective is to stay still in the hoop on one leg for as long as possible.
 Stand in the hoop and wait for the expert's signal (ready?) to balance on your left leg (almost straight),
@@ -143,12 +145,12 @@ Stand in the hoop and wait for the expert's signal (ready?) to balance on your l
              close your eyes on the expert's command and, 10 seconds later, still
              on the expert's command, slowly tilt your head back. Keep this position as long as possible.
              The test ends after 60 seconds. Then repeat the exercise on the right leg."),
-                 img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLAGU9SyXwkVJCUh67II_SOM-xuKpxAFdaxEbrteb8y9lpCSpJGjmChUH7PO9RABt58E&usqp=CAU", width = "250px")),
+                 div(style = "text-align: center",img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLAGU9SyXwkVJCUh67II_SOM-xuKpxAFdaxEbrteb8y9lpCSpJGjmChUH7PO9RABt58E&usqp=CAU", width = "250px",style = "margin-top: 10px"))),
         tabPanel(h4("Task 4 : Planking"),
                  p("The goal is to hold the plank position for as long as possible while alternately lifting your legs in rhythm.
                    Lift your feet alternately 2 to 5 cm at a rate of once per second. The lower back must remain in constant contact
                    with the bar of the machine for the duration of the test, otherwise the timer will be stopped."),
-                 img(src = "https://i.ytimg.com/vi/hdeM1WRmFkk/mqdefault.jpg", width = "300px")),
+                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/hdeM1WRmFkk/mqdefault.jpg", width = "500px",style = "margin-top: 60px"))),
         tabPanel(h4("Task 5 : Running"),
                  p("The goal is to keep running as long as possible at the set pace.
 Take your place on the back line that serves as the starting line. Wait for the 5th beep,
@@ -158,14 +160,15 @@ Take your place on the back line that serves as the starting line. Wait for the 
              it with the tip of your foot for the turn to be valid. The speed increases every 200 m (louder beep).
              You are eliminated as soon as you can no longer keep up the pace or catch up. Leave the race area immediately and
              make sure that the expert has noted your time."),
-                 img(src = "https://i.ytimg.com/vi/JoF2a80NJ6Y/maxresdefault.jpg", width = "400px")),
+                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/JoF2a80NJ6Y/maxresdefault.jpg", width = "500px",style = "margin-top: 60px"))),
       )#close tabset Panel
     ) #close main Panel
   ), #close sidebar layout
   fluidPage(
-    fluidRow(
-    column(6,h4("Strengths and weaknesses"), plotOutput("plot", width = "400px")),
-    column(6,h4("Possible weapon class"),dataTableOutput("dynamic"))
+    sidebarLayout(
+      sidebarPanel(h4("Strengths and weaknesses"),title = "Strengths and weaknesses",plotOutput("plot", width = "400px"), textOutput("output")),
+      mainPanel(column(width = 6,h4("Possible weapon class"),dataTableOutput("dynamic")),
+                column(width = 6,div(style = "text-align: center",img(src = "armee.png", height=70, width=400,style = "margin-top: 200px"))))
     )
   )
 )# close fluid page
@@ -187,11 +190,14 @@ server <- function(input, output) {
   output$slider3Value <- renderText({
     input$slider5
   })
+  output$output <- renderText({
+    paste("Total points: ",as.character(Reduce('+',Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run ))))
+  })
   output$plot <- renderPlot({
     Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )
   })
   output$dynamic <- renderDataTable({
-    Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run ))}, options = list(pageLength = 5)
+    Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run ))}, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE)
   )
 }
 
