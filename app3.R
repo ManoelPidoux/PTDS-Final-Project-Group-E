@@ -2,6 +2,8 @@ library(shiny)
 library(readxl)
 library(fmsb)
 library(bslib)
+library(shinydashboard)
+library(shinyBS)
 
 Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, running = 0){
   if(any(!is.numeric(jumping))){
@@ -65,7 +67,7 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
   colnames(data) <- c("jumping" , "ball toss" , "equilibrium" , "planking" , "running" )
   data <- rbind(rep(25,5) , rep(0,5) , data)
   fmsb::radarchart(data, axistype=1 ,
-                   pcol=rgb(0.2,0.5,0.5,0.9) , pfcol=rgb(0.2,0.5,0.5,0.5) , plwd=2 ,
+                   pcol=rgb(0.8, 0.1, 0.1,0.9) , pfcol=rgb(0.8, 0.1, 0.1,0.4) , plwd=2 ,
                    cglcol="grey", cglty=1, axislabcol="black", caxislabels=c(0,NA,12.5, NA,25), cglwd=0.8,
                    vlcex=0.8)
   return(invisible(list_of_points))
@@ -89,7 +91,7 @@ Orientation <- function(results){
 
 
 ui <- fluidPage(
-  #theme = bs_theme(version = 4, bootswatch = "journal"),
+  theme = bs_theme(version = 3,bootswatch = "simplex"),
   # App title ----
   titlePanel("Performance Scoreboard for Recruitment"),
   sidebarLayout(
@@ -160,7 +162,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
              it with the tip of your foot for the turn to be valid. The speed increases every 200 m (louder beep).
              You are eliminated as soon as you can no longer keep up the pace or catch up. Leave the race area immediately and
              make sure that the expert has noted your time."),
-                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/JoF2a80NJ6Y/maxresdefault.jpg", width = "500px",style = "margin-top: 60px"))),
+                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/JoF2a80NJ6Y/maxresdefault.jpg", width = "500px",style = "margin-top: 50px"))),
       )#close tabset Panel
     ) #close main Panel
   ), #close sidebar layout
