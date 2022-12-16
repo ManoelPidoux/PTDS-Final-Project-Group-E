@@ -161,7 +161,7 @@ ui <- fluidPage(
     ),
     column(3,
            sliderInput(inputId = "Run",
-                       label = "Runing:",
+                       label = "Running:",
                        min = 0,
                        max = 1300,
                        value = 30)
@@ -172,9 +172,11 @@ ui <- fluidPage(
   ),
   # row 6
   fluidPage(
-    column(6,
+    h4("Spider chart"),
+    column(4,
            plotOutput("plot", width = "400px")),
-    column(4,dataTableOutput("dynamic"))
+    column(6,
+           dataTableOutput("dynamic"))
   )
 )
 
