@@ -1,4 +1,4 @@
-Package: pkgrpEArmy.pkg
+Package: pkgrpEArmy
 Type: Package
 Title: Army Shiny App Package - Group E Programming Tools in Data Science
 Version: 0.1.0
@@ -23,14 +23,11 @@ Description: The package will recall a shiny app regarding "Performance Scoreboa
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 4.0.0)
+Depends: shiny
 Imports:
     shiny (>= 1.7.2),
-    readxl(>= 1.4.1),
-    fmsb(>= 0.7.4),
-    bslib(>= 0.4.0),
-    shinydashboard(>= 0.7.2,
-    shinyBS(>= 0.61.1),
-    vembedr(>= 0.1.5)
-    
-    
+    bslib (>= 0.4.0),
+    shinydashboard (>= 0.7.2),
+    shinyBS (>= 0.61.1),
+    vembedr (>= 0.1.5)
+RoxygenNote: 7.2.3
