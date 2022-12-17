@@ -10,7 +10,7 @@ shinyapp()
 The shiny app of Group-E
 }
 \description{
-This will recall the Shiny-App created by Group-E regarding         Performance Scoreboard for Recruitment
+This will recall the Shiny-App created by Group-E regarding Performance Scoreboard for Recruitment
 }
 \author{
 Group-E

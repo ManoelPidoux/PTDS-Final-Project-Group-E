@@ -17,7 +17,7 @@ Description: The package will recall a shiny app regarding "Performance Scoreboa
              exercises to do. 
 License: MIT + file LICENSE
 Encoding: UTF-8
-Depends: shiny
+Depends: R (>= 4.0.0)
 Imports:
     shiny (>= 1.7.2),
     bslib (>= 0.4.0),
