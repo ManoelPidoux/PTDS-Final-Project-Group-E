@@ -1,0 +1,18 @@
+Package: pkgrpEdata
+Title: Package Containing the Data needed - Group E Programming Tools in Data Science
+Version: 0.1.0
+Authors@R: c(
+    person("Jacopo", "Beghetto", email = "jacopo.beghetto@unil.ch", role = c("aut","cre")),
+    person("Alistair", "Bisol", email = "alistair.bisol@unil.ch", role = "aut"),
+    person("Andrea", "Ferrazzo", email = "andrea.errazzo@unil.ch", role = "aut"),
+    person("Manoel", "Pidoux", email = "manoel.pidoux@unil.ch", role = "aut")
+    )
+Maintainer: Jacopo Beghetto <jacopo.beghetto@unil.ch>
+Description: Package to load the data needed.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.0.0)
+Imports:
+    readxl (>= 1.4.1)
+RoxygenNote: 7.2.3
