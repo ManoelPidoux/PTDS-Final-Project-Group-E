@@ -1,0 +1,36 @@
+Package: pkgrpEArmy.pkg
+Type: Package
+Title: Army Shiny App Package - Group E Programming Tools in Data Science
+Version: 0.1.0
+Authors@R: c(
+    person("Jacopo", "Beghetto", email = "jacopo.beghetto@unil.ch", role = c("aut","cre")),
+    person("Alistair", "Bisol", email = "alistair.bisol@unil.ch", role = "aut"),
+    person("Andrea", "Ferrazzo", email = "andrea.errazzo@unil.ch", role = "aut"),
+    person("Manoel", "Pidoux", email = "manoel.pidoux@unil.ch", role = "aut")
+    )
+Maintainer: Jacopo Beghetto <jacopo.beghetto@unil.ch>
+Description: The package will recall a shiny app regarding "Performance Scoreboard 
+             for Recruitment".
+             The app was built by group E and by inserting the result of some 
+             phisical exercises, will give you a possible weapon class of belonging.
+             The app is entirely in English with video in French regarding the 
+             exercises to do. 
+             The app contains also two main function essential for our purpose.
+             The first one return the graph and will create a list of points.
+             The second one is correlated to the first one as it will create a
+             data-frame listing weapons class based on the sum of point from the 
+             list created before.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.0.0)
+Imports:
+    shiny (>= 1.7.2),
+    readxl(>= 1.4.1),
+    fmsb(>= 0.7.4),
+    bslib(>= 0.4.0),
+    shinydashboard(>= 0.7.2,
+    shinyBS(>= 0.61.1),
+    vembedr(>= 0.1.5)
+    
+    
