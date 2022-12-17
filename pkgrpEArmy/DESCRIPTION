@@ -15,19 +15,14 @@ Description: The package will recall a shiny app regarding "Performance Scoreboa
              phisical exercises, will give you a possible weapon class of belonging.
              The app is entirely in English with video in French regarding the 
              exercises to do. 
-             The app contains also two main function essential for our purpose.
-             The first one return the graph and will create a list of points.
-             The second one is correlated to the first one as it will create a
-             data-frame listing weapons class based on the sum of point from the 
-             list created before.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Depends: shiny
 Imports:
     shiny (>= 1.7.2),
     bslib (>= 0.4.0),
     shinydashboard (>= 0.7.2),
     shinyBS (>= 0.61.1),
-    vembedr (>= 0.1.5)
+    vembedr (>= 0.1.5),
+    pkgrpEArmyDataConv (>= 0.1.0)
 RoxygenNote: 7.2.3

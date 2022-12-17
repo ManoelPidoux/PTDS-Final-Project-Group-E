@@ -3,6 +3,7 @@ library(bslib)
 library(shinydashboard)
 library(shinyBS)
 library(vembedr)
+library(pkgrpEArmyDataConv)
 
 shinyServer(function(input, output) {
   output$slider1Value <- renderText({

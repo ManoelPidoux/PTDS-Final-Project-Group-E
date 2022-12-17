@@ -5,11 +5,9 @@
 #' @import shinydashboard
 #' @import shinyBS
 #' @import vembedr
+#' @import pkgrpEArmyDataConv
 #' @description This will recall the Shiny-App created by Group-E regarding         Performance Scoreboard for Recruitment
-#' @param
-#' @return
-#' @examples
-#'
+#' @return The shiny app of Group-E
 #' @export
 
 shinyapp <- function() {

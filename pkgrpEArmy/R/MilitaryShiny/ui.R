@@ -3,6 +3,7 @@ library(bslib)
 library(shinydashboard)
 library(shinyBS)
 library(vembedr)
+library(pkgrpEArmyDataConv)
 
 shinyapp <- function() {shiny::runApp(system.file("shinyapp", package = "pkgrpEArmy"))}
 
