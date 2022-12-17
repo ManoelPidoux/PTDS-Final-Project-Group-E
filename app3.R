@@ -4,6 +4,7 @@ library(fmsb)
 library(bslib)
 library(shinydashboard)
 library(shinyBS)
+library(vembedr)
 
 Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, running = 0){
   if(any(!is.numeric(jumping))){
@@ -89,7 +90,6 @@ Orientation <- function(results){
 }
 
 
-
 ui <- fluidPage(
   theme = bs_theme(version = 3,bootswatch = "simplex"),
   # App title ----
@@ -130,7 +130,7 @@ ui <- fluidPage(
 Stand behind the take-off line with your feet hip-width apart. Stand on your toes and make sure your feet don't bite into the line.
 Bend your knees slightly and lean forward a little. Bring your arms back to lunge. Look straight ahead.
 Jump forward as vigorously as possible with parallel feet, swinging your arms in front of you. Land with both feet on the mat. Hold the position (if possible) for a few seconds and step out in front of the mats. You have three tries; the best one counts.",style = "font-size: 12pt"),
-                 div(style = "text-align: center",img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ZfnvRwQtllKKhFK8LTTwmCBVAxTP4-TxQ_ruUMQvt9i6X5s7O3SSDK0pgD49ErSgJ7Q&usqp=CAU", width = "250px",style = "margin-top: 5px"))),
+                 div(style = "text-align: center",embed_url("https://www.youtube.com/watch?v=RkkfCWhtJkg"))),
         tabPanel(h4("Task 2 : Ball Toss",style = "font-size: 18pt"),
                  p("The goal is to throw the ball as far as possible in front of you with both hands.
                    Sit on the Swedish bench with your buttocks and back against the wall, feet hip-width apart.
@@ -138,7 +138,7 @@ Jump forward as vigorously as possible with parallel feet, swinging your arms in
                    Grab the heavy ball held by another candidate and hold it in front of your chest with both hands, elbows apart.
                    Throw the ball explosively (without pumping) by pushing on the legs so that the back stays against the wall.
                    The ball should be thrown at an angle of about 45 degrees. You have three tries; the best one counts.",style = "font-size: 12pt"),
-                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/uZfNDP0_1so/mqdefault.jpg", width = "500px",style = "margin-top: 40px"))),
+                 div(style = "text-align: center",embed_url("https://www.youtube.com/watch?v=uZfNDP0_1so"))),
         tabPanel(h4("Task 3 : Equilibrium",style = "font-size: 18pt"),
                  p("The objective is to stay still in the hoop on one leg for as long as possible.
 Stand in the hoop and wait for the expert's signal (ready?) to balance on your left leg (almost straight),
@@ -147,12 +147,12 @@ Stand in the hoop and wait for the expert's signal (ready?) to balance on your l
              close your eyes on the expert's command and, 10 seconds later, still
              on the expert's command, slowly tilt your head back. Keep this position as long as possible.
              The test ends after 60 seconds. Then repeat the exercise on the right leg.",style = "font-size: 12pt"),
-                 div(style = "text-align: center",img(src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLAGU9SyXwkVJCUh67II_SOM-xuKpxAFdaxEbrteb8y9lpCSpJGjmChUH7PO9RABt58E&usqp=CAU", width = "250px",style = "margin-top: 5px"))),
+                 div(style = "text-align: center",embed_url("https://www.youtube.com/watch?v=KEcJWseeHBs"))),
         tabPanel(h4("Task 4 : Planking",style = "font-size: 18pt"),
                  p("The goal is to hold the plank position for as long as possible while alternately lifting your legs in rhythm.
                    Lift your feet alternately 2 to 5 cm at a rate of once per second. The lower back must remain in constant contact
                    with the bar of the machine for the duration of the test, otherwise the timer will be stopped.",style = "font-size: 12pt"),
-                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/hdeM1WRmFkk/mqdefault.jpg", width = "500px",style = "margin-top: 40px"))),
+                 div(style = "text-align: center",embed_url("https://www.youtube.com/watch?v=hdeM1WRmFkk"))),
         tabPanel(h4("Task 5 : Running",style = "font-size: 18pt"),
                  p("The goal is to keep running as long as possible at the set pace.
 Take your place on the back line that serves as the starting line. Wait for the 5th beep,
@@ -162,7 +162,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
              it with the tip of your foot for the turn to be valid. The speed increases every 200 m (louder beep).
              You are eliminated as soon as you can no longer keep up the pace or catch up. Leave the race area immediately and
              make sure that the expert has noted your time.",style = "font-size: 12pt"),
-                 div(style = "text-align: center",img(src = "https://i.ytimg.com/vi/JoF2a80NJ6Y/maxresdefault.jpg", width = "500px",style = "margin-top: 20px"))),
+                 div(style = "text-align: center",embed_url("https://www.youtube.com/watch?v=JoF2a80NJ6Y"))),
       )#close tabset Panel
     ) #close main Panel
   ), #close sidebar layout
@@ -170,7 +170,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
     sidebarLayout(
       sidebarPanel(h4("Strengths and weaknesses",style = "font-size: 18pt"),title = "Strengths and weaknesses",plotOutput("plot", width = "400px"), textOutput("output")),
       mainPanel(column(width = 6,h4("Possible weapon class",style = "font-size: 18pt"),dataTableOutput("dynamic")),
-                column(width = 6,div(style = "text-align: center",img(src = "armee.png", height=70, width=400,style = "margin-top: 200px"))))
+                column(width = 6,div(style = "text-align: center",img(src = "http://www.karate.ch/wp-content/uploads/armee-schweiz_Logo.jpg", width=500,style = "margin-top: 150px"))))
     )
   )
 )# close fluid page
