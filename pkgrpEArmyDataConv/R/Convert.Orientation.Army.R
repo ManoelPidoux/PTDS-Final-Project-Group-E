@@ -47,7 +47,7 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
   if(any(running<0)){
     stop("'running' must be positive")
   }
-  points_army <- data("points_army", package = "pkgrpEArmyDataConv")
+  load("data/points_army.rda")
   list_of_points <- list(jp = 0, btp = 0, ep = 0, pp = 0, rp = 0)
   if(jumping < points_army$jumping[25]){list_of_points$jp = points_army$points[26]}
   if(jumping >= points_army$jumping[1]){list_of_points$jp = points_army$points[1]}
@@ -99,7 +99,7 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
 #' @export
 
 Orientation <- function(results){
-  Performances <- data("Performance_sportive_et_nb_points", package = "pkgrpEArmyDataConv")
+  load("data/Performance_sportive_et_nb_points.rda")
   sum_of_points <- Reduce('+', results)
   list_of_posibilities <- list()
   list_of_points <- list()

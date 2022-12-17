@@ -19,10 +19,5 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.0.0)
 Imports:
-    readxl (>= 1.4.1),
-    fmsb (>= 0.7.4),
-    bslib (>= 0.4.0),
-    shinydashboard (>= 0.7.2),
-    shinyBS (>= 0.61.1),
-    vembedr (>= 0.1.5)
+    fmsb (>= 0.7.4)
 RoxygenNote: 7.2.3
