@@ -16,9 +16,9 @@ Description: PACKAGE: The package will recall two main function.
              list created before.    
              Additionally the package contains the data-sets used and loaded directly in the 
              functions mentioned before and that cand be loaded directly from the user.    
-             The first data-set, the 'points_army' data-set a data frame with 26 rows and 6 columns contianing several results from 5 type 
-             of exercises and the point gained from obtaining that resultb  for each category. Example:
-             Having a result between 2.80 and 2.85 in jumping will give you 24 points.
+             The first data-set, the 'points_army' data-set a data frame with 26 rows and 6 columns contianing 
+             several results from 5 type of exercises and the point gained from obtaining that resultb  for 
+             each category. Example: Having a result between 2.80 and 2.85 in jumping will give you 24 points.
              The 'Performances' data-set, a data frame with 19 rows and 2 columns, is about the minimum
              points needd to reach a specific weapon class. Example: If after completing your exercises
              the sum of the results is 50, it means you can enter all the army class equals or below 
