@@ -1,78 +1,84 @@
 "","Fonction","min nb points"
-"1","Company Accountant",0
-"2","Troop Cook",0
-"3","Office Order",0
-"4","Cook (Civil Protection)",0
-"5","Drone Pilot / Operator",0
-"6","Pioneer (Civil Protection)",0
-"7","Materielman (Civil Protection)",0
-"8","Assistance Officer (Civil Protection)",0
-"9","Driver's aid Attendant (Civil Protection)",0
-"10","Infrastructure Officer (Civil Protection)",0
-"11","Cyber Soldier",0
-"12","Kitchen Logistics Soldier",0
-"13","Operations Soldier (training and support)",0
-"14","Cannoneer",35
-"15","Fusilier",35
-"16","Mechanic",35
-"17","Intelligence Soldier",35
-"18","Transmission Soldier",35
-"19","Artillery driver",35
-"20","Construction machinery Operator",35
-"21","Driver of NBC detection vehicles",35
-"22","NBC exploration vehicle Driver",35
-"23","Diagnostician of the Swiss Control Network",35
-"24","Radio Explorer",35
-"25","Strategic radio Explorer (Long Service)",35
-"26","Blacksmith",35
-"27","Officers' orders",35
-"28","Pioneer of directed wave technology",35
-"29","Bridge Operator",35
-"30","Bridge Operator / Bellman",35
-"31","Rescue Equipment Operator",35
-"32","Secretary",35
-"33","Hospital Soldier",35
-"34","Fire Marshal",35
-"35","NBC Defense Soldier Decontamination",35
-"36","NBC Defense Soldier Detection",35
-"37","Logistics Soldier",35
-"38","Soldier in the Military Band",35
-"39","Driving Echelon Soldier",35
-"40","Radar Soldier",35
-"41","Air Force Intelligence Soldier",35
-"42","Telematics Soldier",35
-"43","Telematics Soldier / Language Specialist Candidate",35
-"44","STINGER Guided Machine Soldier",35
-"45","Technical Hospital Soldier",35
-"46","Construction Soldier",35
-"47","Health Soldier - Medical Region",35
-"48","Veterinarian Soldier",35
-"49","Driver",50
-"50","Motorist for special vehicles",50
-"51","Dog handler",50
-"52","Traffic Soldier",50
-"53","Cannonballer",65
-"54","Infantryman",65
-"55","Sanitary",65
-"56","Artillery Soldier",65
-"57","Air Force Soldier",65
-"58","Artillery Tracked Vehicle Driver",65
-"59","Crew Infantryman",65
-"60","Unit Sanitarian / Sanitary Tank Driver",65
-"61","Unit Sanitary - Driver C1",65
-"62","Sapper",65
-"63","Grenadier Tank Crew Soldier",65
-"64","Tank Soldier",65
-"65","Tank Support Trooper",65
-"66","Rescue Trooper",65
-"67","Safety Soldier",65
-"68","Train Soldier",65
-"69","Military Police Soldier",70
-"70","Pilot",80
-"71","Parachute Scout",80
-"72","Tank Sapper",80
-"73","Sports Soldier",80
-"74","Explorer",85
-"75","Scout",85
-"76","Mountain Specialist",85
-"77","Grenadier - Isone, Char or Military Police",90
+"1","<a href=""https://www.miljobs.ch/fr/functions/comptable-de-troupe"">Company Accountant</a>",0
+"2","<a href=""https://www.miljobs.ch/fr/functions/cuisinier-de-troupe"">Troop Cook</a>",0
+"3","<a href=""https://www.miljobs.ch/fr/functions/ordonnance-de-bureau"">Office Order</a>",0
+"4","<a href=""https://www.miljobs.ch/fr/functions/cuisinier-protection-civile"">Cook (Civil Protection)</a>",0
+"5","<a href=""https://www.miljobs.ch/fr/functions/pilote-de-drones-operateur-de-charges-utiles-de-drones"">Drone Pilot / Operator</a>",0
+"6","<a href=""https://www.miljobs.ch/fr/functions/pionnier-protection-civile"">Pioneer (Civil Protection)</a>",0
+"7","<a href=""https://www.miljobs.ch/fr/functions/prepose-au-materiel-protection-civile"">Materielman (Civil Protection)</a>",0
+"8","<a href=""https://www.miljobs.ch/fr/functions/prepose-a-lassistance-protection-civile"">Assistance Officer (Civil Protection)</a>",0
+"9","<a href=""https://www.miljobs.ch/fr/functions/prepose-a-laide-a-la-conduite-protection-civile"">Driver's aid Attendant (Civil Protection)</a>",0
+"10","<a href=""https://www.miljobs.ch/fr/functions/prepose-a-linfrastructure-protection-civile"">Infrastructure Officer (Civil Protection)</a>",0
+"11","<a href=""https://www.miljobs.ch/fr/functions/soldat-cyber"">Cyber Soldier</a>",0
+"12","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-la-logistique-de-cuisine"">Kitchen Logistics Soldier</a>",0
+"13","<a href=""https://www.miljobs.ch/fr/functions/soldat-dexploitation-instruction-et-support"">Operations Soldier (training and support)</a>",0
+"14","<a href=""https://www.miljobs.ch/fr/functions/canonnier"">Cannoneer</a>",35
+"15","<a href=""https://www.miljobs.ch/fr/functions/fusilier-de-bord"">Fusilier</a>",35
+"16","<a href=""https://www.miljobs.ch/fr/functions/mecanicien-sur-appareils"">Mechanic on equipment </a>",35
+"17","<a href=""https://www.miljobs.ch/fr/functions/mecanicien-sur-appareils-de-renseignement-des-forces-aeriennes"">mechanic on air force intelligence aircraft</a>",35
+"18","<a href=""https://www.miljobs.ch/fr/functions/mecanicien-sur-armes"">weapons mechanic</a>",35
+"19","<a href=""https://www.miljobs.ch/fr/functions/mecanicien-sur-chars"">mechanic on tanks</a>",35
+"20","<a href=""https://www.miljobs.ch/fr/functions/mecanicien-sur-moteurs"">mechanic on engines</a>",35
+"21","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-renseignement"">Intelligence Soldier</a>",35
+"22","<a href=""https://www.miljobs.ch/fr/functions/soldat-des-transmissions"">Transmission Soldier</a>",35
+"23","<a href=""https://www.miljobs.ch/fr/functions/conducteur-de-lartillerie"">Artillery driver</a>",35
+"24","<a href=""https://www.miljobs.ch/fr/functions/conducteur-de-machines-de-chantier"">Construction machinery Operator</a>",35
+"25","<a href=""https://www.miljobs.ch/fr/functions/conducteur-de-vehicules-de-detection-nbc"">Driver of NBC detection vehicles</a>",35
+"26","<a href=""https://www.miljobs.ch/fr/functions/conducteur-de-vehicules-dexploration-nbc"">NBC exploration vehicle Driver</a>",35
+"27","<a href=""https://www.miljobs.ch/fr/functions/diagnosticien-reseau-de-conduite-suisse"">Diagnostician of the Swiss Control Network</a>",35
+"28","<a href=""https://www.miljobs.ch/fr/functions/explorateur-radio"">Radio Explorer</a>",35
+"29","<a href=""https://www.miljobs.ch/fr/functions/explorateur-radio-strategique"">Strategic radio Explorer (Long Service)</a>",35
+"30","<a href=""https://www.miljobs.ch/fr/functions/marechal-ferrant"">Blacksmith</a>",35
+"31","<a href=""https://www.miljobs.ch/fr/functions/ordonnance-dofficiers"">Officers' orders</a>",35
+"32","<a href=""https://www.miljobs.ch/fr/functions/pionnier-dondes-dirigees"">Pioneer of directed wave technology</a>",35
+"33","<a href=""https://www.miljobs.ch/fr/functions/pontonnier"">Bridge Operator</a>",35
+"34","<a href=""https://www.miljobs.ch/fr/functions/pontonnier-de-sonnettes"">Bridge Operator / Bellman</a>",35
+"35","<a href=""https://www.miljobs.ch/fr/functions/prepose-aux-engins-de-sauvetage"">Rescue Equipment Operator</a>",35
+"36","<a href=""https://www.miljobs.ch/fr/functions/secretaire"">Secretary</a>",35
+"37","<a href=""https://www.miljobs.ch/fr/functions/soldat-dhopital"">Hospital Soldier</a>",35
+"38","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-direction-des-feux"">Fire Marshal</a>",35
+"39","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-defense-nbc-decontamination"">NBC Defense Soldier Decontamination</a>",35
+"40","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-defense-nbc-detection"">NBC Defense Soldier Detection</a>",35
+"41","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-la-logistique"">Logistics Soldier</a>",35
+"42","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-la-musique-militaire"">Soldier in the Military Band</a>",35
+"43","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-lechelon-de-conduite"">Driving Echelon Soldier</a>",35
+"44","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-radar"">Radar Soldier</a>",35
+"45","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-renseignement-des-forces-aeriennes"">Air Force Intelligence Soldier</a>",35
+"46","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-telematique"">Telematics Soldier</a>",35
+"47","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-telematique-candidat-specialiste-de-langues"">Telematics Soldier / Language Specialist Candidate</a>",35
+"48","<a href=""https://www.miljobs.ch/fr/functions/soldat-dengins-guides-stinger"">STINGER Guided Machine Soldier</a>",35
+"49","<a href=""https://www.miljobs.ch/fr/functions/soldat-dhopital-technique"">Technical Hospital Soldier</a>",35
+"50","<a href=""https://www.miljobs.ch/fr/functions/soldat-douvrage"">Construction Soldier</a>",35
+"51","<a href=""https://www.miljobs.ch/fr/functions/soldat-sanitaire-region-medico-militaire"">Health Soldier - Medical Region</a>",35
+"52","<a href=""https://www.miljobs.ch/fr/functions/soldat-veterinaire"">Veterinarian Soldier</a>",35
+"53","<a href=""https://www.miljobs.ch/fr/functions/automobiliste"">Driver</a>",50
+"54","<a href=""https://www.miljobs.ch/fr/functions/automobiliste-vehicules-speciaux"">Motorist for special vehicles</a>",50
+"55","<a href=""https://www.miljobs.ch/fr/functions/conducteur-de-chiens"">Dog handler</a>",50
+"56","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-la-circulation"">Traffic Soldier</a>",50
+"57","<a href=""https://www.miljobs.ch/fr/functions/canonnier-lance-mines"">Cannonballer</a>",65
+"58","<a href=""https://www.miljobs.ch/fr/functions/fantassin"">Infantryman</a>",65
+"59","<a href=""https://www.miljobs.ch/fr/functions/soldat-sanitaire"">Sanitary</a>",65
+"60","<a href=""https://www.miljobs.ch/fr/functions/soldat-dartillerie"">Artillery Soldier</a>",65
+"61","<a href=""https://www.miljobs.ch/fr/functions/soldat-daviation-soldat-daerodrome"">Air Force Soldier</a>",65
+"62","<a href=""https://www.miljobs.ch/fr/functions/conducteur-de-vehicules-a-chenilles-de-lartillerie"">Artillery Tracked Vehicle Driver</a>",65
+"63","<a href=""https://www.miljobs.ch/fr/functions/fantassin-dequipage"">Crew Infantryman</a>",65
+"64","<a href=""https://www.miljobs.ch/fr/functions/sanitaire-dunite"">Unit Sanitarian / Sanitary Tank Driver</a>",65
+"65","<a href=""https://www.miljobs.ch/fr/functions/sanitaire-dunite-conducteur-c1"">Unit Sanitary - Driver C1</a>",65
+"66","<a href=""https://www.miljobs.ch/fr/functions/sapeur"">Sapper</a>",65
+"67","<a href=""https://www.miljobs.ch/fr/functions/soldat-dequipage-de-chars"">Grenadier Tank Crew Soldier</a>",65
+"68","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-chars"">Tank Soldier</a>",65
+"69","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-chars-dappui"">Tank Support Trooper</a>",65
+"70","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-sauvetage"">Rescue Trooper</a>",65
+"71","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-surete"">Safety Soldier</a>",65
+"72","<a href=""https://www.miljobs.ch/fr/functions/soldat-du-train"">Train Soldier</a>",65
+"73","<a href=""https://www.miljobs.ch/fr/functions/soldat-de-la-police-militaire"">Military Police Soldier</a>",70
+"74","<a href=""https://www.miljobs.ch/fr/functions/pilote-militaire-fonction-professionnelle"">Pilot</a>",80
+"75","<a href=""https://www.miljobs.ch/fr/functions/eclaireur-parachutiste"">Parachute Scout</a>",80
+"76","<a href=""https://www.miljobs.ch/fr/functions/sapeur-de-chars"">Tank Sapper</a>",80
+"77","<a href=""https://www.miljobs.ch/fr/functions/soldat-sport"">Sports Soldier</a>",80
+"78","<a href=""https://www.miljobs.ch/fr/functions/explorateur"">Explorer</a>",85
+"79","<a href=""https://www.miljobs.ch/fr/functions/eclaireur"">Scout</a>",85
+"80","<a href=""https://www.miljobs.ch/fr/functions/specialiste-de-montagne"">Mountain Specialist</a>",85
+"81","<a href=""https://www.miljobs.ch/fr/functions/grenadier"">Grenadier - Isone</a>",90
+"82","<a href=""https://www.miljobs.ch/fr/functions/grenadier-de-chars"">Tank grenadier</a>",90
+"83","<a href=""https://www.miljobs.ch/fr/functions/grenadier-de-la-police-militaire"">military police grenadier</a>",90
