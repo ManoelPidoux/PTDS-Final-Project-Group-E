@@ -3,7 +3,7 @@
 \docType{data}
 \name{Performances}
 \alias{Performances}
-\title{SportPerformances}
+\title{Sport Performances}
 \format{
 ## Performances
 A data frame with 19 rows and 2 columns:
@@ -19,6 +19,6 @@ load("data/Performance_sportive_et_nb_points.rda")
 Performances
 }
 \description{
-SportPerformances
+Sport Performances
 }
 \keyword{datasets}

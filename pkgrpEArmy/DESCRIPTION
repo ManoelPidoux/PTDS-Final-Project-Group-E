@@ -40,9 +40,12 @@ Imports:
     shinydashboard (>= 0.7.2),
     shinyBS (>= 0.61.1),
     vembedr (>= 0.1.5),
-    grDevices (>= 4.1.1)
+    grDevices (>= 4.1.1),
+    dplyr (>= 1.0.10)
 Suggests: 
+    knitr,
     rmarkdown,
     testthat (>= 3.0.0)
 RoxygenNote: 7.2.3
 Config/testthat/edition: 3
+VignetteBuilder: knitr

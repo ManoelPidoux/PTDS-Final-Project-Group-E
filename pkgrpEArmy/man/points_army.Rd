@@ -3,7 +3,7 @@
 \docType{data}
 \name{points_army}
 \alias{points_army}
-\title{PointsScoreData}
+\title{Points Score Data}
 \format{
 ## points_army
 A data frame with 26 rows and 6 columns:
@@ -23,6 +23,6 @@ load("data/points_army.rda")
 points_army
 }
 \description{
-PointsScoreData
+Points Score Data
 }
 \keyword{datasets}

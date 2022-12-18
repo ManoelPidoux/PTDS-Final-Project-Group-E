@@ -1,0 +1,52 @@
+---
+title: "The Military App You Need"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(pkgrpEArmy)
+```
+
+# Introduction   
+
+This is a package that will mainly generate a shiny-app (web application) to allow you simulate the military physical test for to be prepared for the real one.
+The purpose of the package is to allow users to have an introduction to what can be a preparation to see which army class they can be associated with after the military phisical test.   
+   
+# Inside the App
+## points_army
+
+Contains all the information regarding the the possible points obtainable from specific results in different exercises.   
+
+## Performances   
+
+Contains the possible army class of affiliation resulted from the total points sum of each exercise.   
+
+## Convert
+
+It generate a radar-chart based on your result in each category of military exercise preparation listed in "point_army". This radar chart is basically a summary of your results in every category.    
+
+## Orientation
+
+This function will generate a data-set that is then used during the creation of the radar-chart explained before in the "Convert" paragraph.   
+
+## militaryapp
+
+This function is used to recall and generate a shiny app. This shiny app is a Military app regarding "Performance Scoreboard for Recruitment", that use all the functions and data-sets mentioned before to create our final output.    
+The app is entirely in English with exercises explanation, video (in French) and also a connection to the website of each military classes directly from the final table.   
+The purpose of our application is also to be as much user-friendly as possible and we tried to make it really easy to use. So to get the final result the user has just to set the result obtained in each exercise 
+with a slider, this will immediately update the radar chart, with the "total points" section, shown under the sliders and the table on the side of the chart that is containing the military classes.
+
+
+
+

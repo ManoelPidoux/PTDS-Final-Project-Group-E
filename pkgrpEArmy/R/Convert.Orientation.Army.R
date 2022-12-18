@@ -1,5 +1,6 @@
 #' Points Score Data
 #'
+#' @import dplyr
 #' @format ## points_army
 #' A data frame with 26 rows and 6 columns:
 #' \describe{
@@ -11,10 +12,12 @@
 #'   \item{running}{Levels of running}
 #' }
 #' @source load("data/points_army.rda")
-"points_army"
+points_army <-  read.csv("data/points_army.csv") %>%
+  select(-1)
 
 #' Sport Performances
 #'
+#' @import dplyr
 #' @format ## Performances
 #' A data frame with 19 rows and 2 columns:
 #' \describe{
@@ -22,7 +25,8 @@
 #'   \item{min nb points}{Minimum points to reach the class}
 #' }
 #' @source load("data/Performance_sportive_et_nb_points.rda")
-"Performances"
+Performances <-  read.csv("data/Performance_sportive_et_nb_points.csv") %>%
+  select(-1)
 
 #' @title Convert
 #' @author Group-E
@@ -143,7 +147,7 @@ Orientation <- function(results){
 #' @import shinydashboard
 #' @import shinyBS
 #' @import vembedr
-#' @description This will recall the Shiny-App created by Group-E regarding Performance Scoreboard for Recruitment
+#' @description This will recall the Shiny-App created by Group-E regarding "Performance Scoreboard for Recruitment"
 #' @return The shiny app of Group-E
 #' @export
 
