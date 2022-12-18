@@ -147,7 +147,7 @@ Orientation <- function(results){
 #' @return The shiny app of Group-E
 #' @export
 
-militaryapp <- function() {
+t <- function() {
   ui <- fluidPage(
     theme = bs_theme(version = 3,bootswatch = "simplex"),
     titlePanel("Performance Scoreboard for Recruitment"),
