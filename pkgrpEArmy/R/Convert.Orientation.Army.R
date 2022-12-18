@@ -155,6 +155,7 @@ Orientation <- function(results){
 militaryapp <- function() {
   ui <- fluidPage(
     theme = bs_theme(version = 3,bootswatch = "simplex"),
+
     titlePanel("Performance Scoreboard for Recruitment"),
     sidebarLayout(
       sidebarPanel(title = "Results",
@@ -172,17 +173,17 @@ militaryapp <- function() {
                                label = "Combined time in seconds for equilibrium:",
                                min = 0,
                                max = 110,
-                               value = 55),
+                               value = 50),
                    sliderInput(inputId = "Plank",
                                label = "Time in seconds for planking:",
                                min = 0,
                                max = 300,
-                               value = 150),
+                               value = 160),
                    sliderInput(inputId = "Run",
                                label = "Time in seconds for running:",
                                min = 0,
                                max = 1300,
-                               value = 650)
+                               value = 600)
       )
       ,
       mainPanel(
@@ -231,12 +232,14 @@ Take your place on the back line that serves as the starting line. Wait for the 
     fluidPage(
       sidebarLayout(
         sidebarPanel(h4("Strengths and weaknesses",style = "font-size: 18pt"),title = "Strengths and weaknesses",plotOutput("plot", width = "400px"), textOutput("output")),
-        mainPanel(column(width = 6,h4("Possible weapon class",style = "font-size: 18pt"), shiny::dataTableOutput("dynamic")),
-                  column(width = 6,div(style = "text-align: center",img(src = "http://www.karate.ch/wp-content/uploads/armee-schweiz_Logo.jpg", width=450,style = "margin-top: 150px"))))
+        mainPanel(column(width = 6,h4("Possible weapon class",style = "font-size: 18pt"),dataTableOutput("dynamic")),
+                  column(width = 6,div(style = "text-align: center",img(src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/Armee_CH_logo.svg", width=500,style = "margin-top: 150px"))))
       )
-    ))
+    )
+  )
 
   server <- function(input, output) {
+
     output$slider1Value <- renderText({
       input$slider1
     })
@@ -258,8 +261,8 @@ Take your place on the back line that serves as the starting line. Wait for the 
     output$plot <- renderPlot({
       Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )
     })
-    output$dynamic <- shiny::renderDataTable({
-      DT::datatable(Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )),escape = FALSE, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE))}
+    output$dynamic <- renderDataTable({
+      datatable(Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )),escape = FALSE, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE))}
     )
   }
 
