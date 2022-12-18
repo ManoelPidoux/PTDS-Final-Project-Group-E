@@ -5,6 +5,7 @@ library(bslib)
 library(shinydashboard)
 library(shinyBS)
 library(vembedr)
+library(DT)
 
 Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, running = 0){
   if(any(!is.numeric(jumping))){
@@ -37,7 +38,7 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
   if(any(running<0)){
     stop("'running' must be positive")
   }
-  points_army <- readxl::read_excel(here::here("Data/points_army.xlsx"))
+  points_army <- readxl::read_excel(here::here("data-raw/points_army.xlsx"))
   list_of_points <- list(jp = 0, btp = 0, ep = 0, pp = 0, rp = 0)
   if(jumping < points_army$jumping[25]){list_of_points$jp = points_army$points[26]}
   if(jumping >= points_army$jumping[1]){list_of_points$jp = points_army$points[1]}
@@ -75,7 +76,7 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
 }
 
 Orientation <- function(results){
-  Performances <- readxl::read_excel(here::here("Data/Performance_sportive_et_nb_points.xlsx"))
+  Performances <- readxl::read_excel(here::here("data-raw/Performance_sportive_et_nb_points.xlsx"))
   sum_of_points <- Reduce('+', results)
   list_of_posibilities <- list()
   list_of_points <- list()
@@ -199,7 +200,7 @@ server <- function(input, output) {
     Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )
   })
   output$dynamic <- renderDataTable({
-    Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run ))}, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE)
+    datatable(Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )),escape = FALSE, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE))}
   )
 }
 
