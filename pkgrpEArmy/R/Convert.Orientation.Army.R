@@ -1,16 +1,153 @@
-#' @title Shiny App
+#' Points Score Data
+#'
+#' @format ## points_army
+#' A data frame with 26 rows and 6 columns:
+#' \describe{
+#'   \item{points}{Points referring to the score}
+#'   \item{jumping}{Levels of jump scores}
+#'   \item{ball_toss}{Levels of ball tosss}
+#'   \item{equilibrium}{Levels of equilibrium}
+#'   \item{planking}{Levels of planking}
+#'   \item{running}{Levels of running}
+#' }
+#' @source load("data/points_army.rda")
+"points_army"
+
+#' Sport Performances
+#'
+#' @format ## Performances
+#' A data frame with 19 rows and 2 columns:
+#' \describe{
+#'   \item{Fonction}{The Class Army}
+#'   \item{min nb points}{Minimum points to reach the class}
+#' }
+#' @source load("data/Performance_sportive_et_nb_points.rda")
+"Performances"
+
+#' @title Convert
+#' @author Group-E
+#' @import fmsb
+#' @import grDevices
+#' @description This function "Convert" will first load the table of points, then will use the score of the army exercises to convert them into a \code{list} of point. Also, the function will \code{plot} a radar-chart showing the correlated points.
+#' @param jumping correspond to the homonymous exercise score. The default value is 0. The measurement system is in meters
+#' @param ball_toss correspond to the homonymous exercise score. The default value is 0.The measurement system is in meters
+#' @param equilibrium correspond to the homonymous exercise score. The default value is 0. The measurement system is in seconds
+#' @param planking correspond to the homonymous exercise score. The default value is 0. The measurement system is in seconds
+#' @param running correspond to the homonymous exercise score. The default value is 0. The measurement system is in seconds
+#' @return A \code{list} of points:
+#' \describe{
+#'     \item{list}{The order of the points correspond to the following exercises result: "jumping" , "ball toss" , "equilibrium" , "planking" , "running" }
+#' }
+#' @examples
+#' Convert(jumping = 2, ball_toss = 5, equilibrium = 30, planking = 50, running = 300)
+#' @export
+
+Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, running = 0){
+  if(any(!is.numeric(jumping))){
+    stop("'jumping' must be numeric")
+  }
+  if(any(!is.numeric(ball_toss))){
+    stop("'ball_toss' must be numeric")
+  }
+  if(any(!is.numeric(equilibrium))){
+    stop("'equilibrium' must be numeric")
+  }
+  if(any(!is.numeric(planking))){
+    stop("'planking' must be numeric")
+  }
+  if(any(!is.numeric(running))){
+    stop("'running' must be numeric")
+  }
+  if(any(jumping < 0)){
+    stop("'jumping' must be positive")
+  }
+  if(any(ball_toss<0)){
+    stop("'ball_toss' must be positive")
+  }
+  if(any(equilibrium<0)){
+    stop("'equilibrium' must be positive")
+  }
+  if(any(planking<0)){
+    stop("'planking' must be positive")
+  }
+  if(any(running<0)){
+    stop("'running' must be positive")
+  }
+  list_of_points <- list(jp = 0, btp = 0, ep = 0, pp = 0, rp = 0)
+  if(jumping < points_army$jumping[25]){list_of_points$jp = points_army$points[26]}
+  if(jumping >= points_army$jumping[1]){list_of_points$jp = points_army$points[1]}
+  for(i in (nrow(points_army)-1):2){
+    if((jumping < points_army$jumping[i-1])&(jumping >= points_army$jumping[i])){list_of_points$jp = points_army$points[i]}
+  }
+  if(ball_toss < points_army$ball_toss[25]){list_of_points$btp = points_army$points[26]}
+  if(ball_toss >= points_army$ball_toss[1]){list_of_points$btp = points_army$points[1]}
+  for(i in (nrow(points_army)-1):2){
+    if((ball_toss < points_army$ball_toss[i-1])&(ball_toss >= points_army$ball_toss[i])){list_of_points$btp = points_army$points[i]}
+  }
+  if(equilibrium < points_army$equilibrium[25]){list_of_points$ep = points_army$points[26]}
+  if(equilibrium >= points_army$equilibrium[1]){list_of_points$ep = points_army$points[1]}
+  for(i in (nrow(points_army)-1):2){
+    if((equilibrium < points_army$equilibrium[i-1])&(equilibrium >= points_army$equilibrium[i])){list_of_points$ep = points_army$points[i]}
+  }
+  if(planking < points_army$planking[25]){list_of_points$pp = points_army$points[26]}
+  if(planking >= points_army$planking[1]){list_of_points$pp = points_army$points[1]}
+  for(i in (nrow(points_army)-1):2){
+    if((planking < points_army$planking[i-1])&(planking >= points_army$planking[i])){list_of_points$pp = points_army$points[i]}
+  }
+  if(running < points_army$running[25]){list_of_points$rp = points_army$points[26]}
+  if(running >= points_army$running[1]){list_of_points$rp = points_army$points[1]}
+  for(i in (nrow(points_army)-1):2){
+    if((running < points_army$running[i-1])&(running >= points_army$running[i])){list_of_points$rp = points_army$points[i]}
+  }
+  data <- as.data.frame(list_of_points)
+  colnames(data) <- c("jumping" , "ball toss" , "equilibrium" , "planking" , "running" )
+  data <- rbind(rep(25,5) , rep(0,5) , data)
+  fmsb::radarchart(data, axistype=1 ,
+                   pcol=rgb(0.8, 0.1, 0.1,0.9) , pfcol=rgb(0.8, 0.1, 0.1,0.4) , plwd=2 ,
+                   cglcol="grey", cglty=1, axislabcol="black", caxislabels=c(0,NA,12.5, NA,25), cglwd=0.8,
+                   vlcex=0.8)
+  return(invisible(list_of_points))
+}
+
+
+
+#' @title Orientation
+#' @author Group-E
+#' @description This function will use the result generated by the "Convert" function to create a data-frame listing weapons class based on the sum of point from the list created before. The point used as an input will be all between 0 and 25 thanks to the output of the "Convert" function.
+#' @param results it has to be a \code{list} of numerical elements
+#' @return A \code{df} of the possible weapons class based on the sum of the points used from the input list.
+#' \describe{ The First column represent the name of the army class and the Second column the minimum point to apply for the class.
+#' }
+#' @examples
+#' Orientation(list(5, 10, 20, 19, 25))
+#' @export
+
+Orientation <- function(results){
+  sum_of_points <- Reduce('+', results)
+  list_of_posibilities <- list()
+  list_of_points <- list()
+  for(i in 1:nrow(Performances)){
+    if(sum_of_points >= Performances[i,2]){list_of_posibilities <- append(list_of_posibilities,Performances[i,1])}
+  }
+  for(i in 1:nrow(Performances)){
+    if(sum_of_points >= Performances[i,2]){list_of_points <- append(list_of_points,Performances[i,2])}
+  }
+  df <- data.frame("Possibilities"= as.character(list_of_posibilities), "Minimum_points" = as.numeric(list_of_points))
+  return(invisible(df))
+}
+
+#' @title Military App
 #' @author Group-E
 #' @import shiny
 #' @import bslib
 #' @import shinydashboard
 #' @import shinyBS
 #' @import vembedr
-#' @import pkgrpEArmyDataConv
 #' @description This will recall the Shiny-App created by Group-E regarding Performance Scoreboard for Recruitment
 #' @return The shiny app of Group-E
 #' @export
 
-shinyapp <- function() {
+militaryapp <- function() {
   ui <- fluidPage(
     theme = bs_theme(version = 3,bootswatch = "simplex"),
     titlePanel("Performance Scoreboard for Recruitment"),
@@ -121,7 +258,5 @@ Take your place on the back line that serves as the starting line. Wait for the 
     )
   }
 
- shinyApp(ui, server)
+  shinyApp(ui, server)
 }
-
-
