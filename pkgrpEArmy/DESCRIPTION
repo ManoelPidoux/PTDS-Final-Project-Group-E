@@ -42,7 +42,7 @@ Imports:
     vembedr (>= 0.1.5),
     grDevices (>= 4.1.1),
     dplyr (>= 1.0.10),
-    DT (>= 0.26)
+    DT (>= 0.25)
 Suggests: 
     knitr,
     rmarkdown,

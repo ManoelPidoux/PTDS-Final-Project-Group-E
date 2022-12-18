@@ -147,7 +147,7 @@ Orientation <- function(results){
 #' @import shinydashboard
 #' @import shinyBS
 #' @import vembedr
-#' @import DT
+#' @importFrom DT datatable
 #' @description This will recall the Shiny-App created by Group-E regarding "Performance Scoreboard for Recruitment"
 #' @return The shiny app of Group-E
 #' @export
@@ -259,7 +259,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
       Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )
     })
     output$dynamic <- renderDataTable({
-      datatable(Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )),escape = FALSE, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE))}
+      DT::datatable(Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )),escape = FALSE, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE))}
     )
   }
 
