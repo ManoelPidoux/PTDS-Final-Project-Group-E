@@ -232,7 +232,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
     fluidPage(
       sidebarLayout(
         sidebarPanel(h4("Strengths and weaknesses",style = "font-size: 18pt"),title = "Strengths and weaknesses",plotOutput("plot", width = "400px"), textOutput("output")),
-        mainPanel(column(width = 6,h4("Possible weapon class",style = "font-size: 18pt"),dataTableOutput("dynamic")),
+        mainPanel(column(width = 6,h4("Possible weapon class",style = "font-size: 18pt"), dataTableOutput("dynamic")),
                   column(width = 6,div(style = "text-align: center",img(src = "https://upload.wikimedia.org/wikipedia/commons/e/ec/Armee_CH_logo.svg", width=500,style = "margin-top: 150px"))))
       )
     )
