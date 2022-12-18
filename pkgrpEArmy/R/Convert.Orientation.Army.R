@@ -167,17 +167,17 @@ militaryapp <- function() {
                                label = "Combined time in seconds for equilibrium:",
                                min = 0,
                                max = 110,
-                               value = 50),
+                               value = 55),
                    sliderInput(inputId = "Plank",
                                label = "Time in seconds for planking:",
                                min = 0,
                                max = 300,
-                               value = 160),
+                               value = 150),
                    sliderInput(inputId = "Run",
                                label = "Time in seconds for running:",
                                min = 0,
                                max = 1300,
-                               value = 600)
+                               value = 650)
       )
       ,
       mainPanel(
@@ -227,7 +227,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
       sidebarLayout(
         sidebarPanel(h4("Strengths and weaknesses",style = "font-size: 18pt"),title = "Strengths and weaknesses",plotOutput("plot", width = "400px"), textOutput("output")),
         mainPanel(column(width = 6,h4("Possible weapon class",style = "font-size: 18pt"),dataTableOutput("dynamic")),
-                  column(width = 6,div(style = "text-align: center",img(src = "http://www.karate.ch/wp-content/uploads/armee-schweiz_Logo.jpg", width=500,style = "margin-top: 150px"))))
+                  column(width = 6,div(style = "text-align: center",img(src = "http://www.karate.ch/wp-content/uploads/armee-schweiz_Logo.jpg", width=450,style = "margin-top: 150px"))))
       )
     ))
 
