@@ -147,7 +147,6 @@ Orientation <- function(results){
 #' @import shinydashboard
 #' @import shinyBS
 #' @import vembedr
-#' @importFrom DT datatable
 #' @description This will recall the Shiny-App created by Group-E regarding "Performance Scoreboard for Recruitment"
 #' @return The shiny app of Group-E
 #' @export
@@ -173,17 +172,17 @@ militaryapp <- function() {
                                label = "Combined time in seconds for equilibrium:",
                                min = 0,
                                max = 110,
-                               value = 50),
+                               value = 55),
                    sliderInput(inputId = "Plank",
                                label = "Time in seconds for planking:",
                                min = 0,
                                max = 300,
-                               value = 160),
+                               value = 150),
                    sliderInput(inputId = "Run",
                                label = "Time in seconds for running:",
                                min = 0,
                                max = 1300,
-                               value = 600)
+                               value = 650)
       )
       ,
       mainPanel(
@@ -262,7 +261,7 @@ Take your place on the back line that serves as the starting line. Wait for the 
       Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )
     })
     output$dynamic <- renderDataTable({
-      datatable(Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run )),escape = FALSE, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE))}
+      Orientation(Convert(jumping = input$Jump, ball_toss = input$Ball, equilibrium = input$Equil, planking = input$Plank, running = input$Run ))}, options = list(pageLength = 5, lengthMenu = c(5, 10), autoWidth = FALSE,ordering = FALSE)
     )
   }
 

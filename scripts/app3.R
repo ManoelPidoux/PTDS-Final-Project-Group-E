@@ -76,7 +76,7 @@ Convert <- function(jumping = 0, ball_toss = 0, equilibrium = 0, planking = 0, r
 }
 
 Orientation <- function(results){
-  Performances <- readxl::read_excel(here::here("data-raw/Performance_sportive_et_nb_points.xlsx"))
+  Performances <- readxl::read_excel(here::here("data-raw/Performance_sportive_et_nb_points2.xlsx"))
   sum_of_points <- Reduce('+', results)
   list_of_posibilities <- list()
   list_of_points <- list()
@@ -111,17 +111,17 @@ ui <- fluidPage(
                          label = "Combined time in seconds for equilibrium:",
                          min = 0,
                          max = 110,
-                         value = 50),
+                         value = 55),
              sliderInput(inputId = "Plank",
                          label = "Time in seconds for planking:",
                          min = 0,
                          max = 300,
-                         value = 160),
+                         value = 150),
              sliderInput(inputId = "Run",
                          label = "Time in seconds for running:",
                          min = 0,
                          max = 1300,
-                         value = 600)
+                         value = 650)
     ) #close sidebar panel
     ,
     mainPanel(

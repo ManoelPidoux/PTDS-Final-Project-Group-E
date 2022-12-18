@@ -41,8 +41,7 @@ Imports:
     shinyBS (>= 0.61.1),
     vembedr (>= 0.1.5),
     grDevices (>= 4.1.1),
-    dplyr (>= 1.0.10),
-    DT (>= 0.25)
+    dplyr (>= 1.0.10)
 Suggests: 
     knitr,
     rmarkdown,
