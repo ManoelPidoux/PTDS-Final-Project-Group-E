@@ -7,5 +7,5 @@ test_that("Convert contains all the correct input", {
 })
 
 test_that("Convert present a wrong parameter and return an error", {
-  expect_warning( Convert(jumping = 1.6 ,boll_toss = 5, equilibrium = 30, planking = 50, running = 300)) #the numerical variable has to be positive
+  expect_condition( Convert(jumping = 1.6 ,boll_toss = 5, equilibrium = 30, planking = 50, running = 300)) #the numerical variable has to be positive
 })
