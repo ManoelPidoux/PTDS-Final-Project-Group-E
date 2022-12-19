@@ -1,0 +1,26 @@
+{
+    "id": "BE554229",
+    "path": "~/GitHub/PTDS-Final-Project-Group-E/scripts/Script to convert dataset format.R",
+    "project_path": "scripts/Script to convert dataset format.R",
+    "type": "r_source",
+    "hash": "463216780",
+    "contents": "",
+    "dirty": false,
+    "created": 1671369962210.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "20,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1671370167,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1671370167759,
+    "read_only": false,
+    "read_only_alternatives": []
+}
