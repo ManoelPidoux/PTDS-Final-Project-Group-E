@@ -13,9 +13,10 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#data-used">Data Used</a>
+    <li><a href="#packages-to-load ">Packages To Load </a>
+    <li><a href="#data-used">Data Used</a></li>
     <li><a href="#examples ">Examples </a></li>
+    <li><a href="#packages-to-load ">Packages To Load </a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -23,7 +24,6 @@
 </details>
 
 <!-- ABOUT THE PACKAGE -->   
-
 ## About the package   
 
 The goal of pkgrpEArmy is to generate a shiny app by calling the function "militaryapp()".   
@@ -38,6 +38,19 @@ You can install the development version of pkgrpEArmy from [GitHub](https://gith
 devtools::install_github("ManoelPidoux/PTDS-Final-Project-Group-E")
 ```
 
+<!-- PACKAGES TO LOAD -->
+## Packages to load  
+   
+First install the following packages:
+``` r
+install.packages(c("shinythemes", "shynyapp", "tidyverse", "bslip", "vembedr"))
+```
+   
+Than load them:
+``` r
+require(c("shinythemes", "shynyapp", "tidyverse", "bslip", "vembedr"))
+```
+
 <!-- DATA USED -->
 ## Data Used
 
@@ -46,8 +59,7 @@ The following websites were used to export data:
 2. [Sport Performances](https://www.miljobs.ch/fr/funtkionen-von-a-bis-z)
 
 <!-- EXAMPLES -->   
-
-## Example
+## Examples
 
 This is a basic example which shows you how to solve a common problem:
 
