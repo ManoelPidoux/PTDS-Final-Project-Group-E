@@ -40,7 +40,7 @@ devtools::install_github("ManoelPidoux/PTDS-Final-Project-Group-E")
 ```
 
 <!-- PACKAGES TO LOAD -->
-## Packages to load  
+## Packages To Load  
    
 First install the following packages:
 ``` r
